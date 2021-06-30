@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-express-mongodb",
+  "version": "1.0.0",
+  "description": "This is a REST API that I developed with Node.js, EDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SydCodeur/nodejs-express-mongodb.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "crud",
+    "rest",
+    "api",
+    "sydcodeur",
+    "didier",
+    "senou"
+  ],
+  "author": "Didier Senou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SydCodeur/nodejs-express-mongodb/issues"
+  },
+  "homepage": "https://github.com/SydCodeur/nodejs-express-mongodb#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
