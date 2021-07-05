@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-express-mongodb",
+  "name": "nodejs-crud-api",
   "version": "1.0.0",
-  "description": "This is a REST API that I developed with Node.js, EDB",
+  "description": "Node.js, Express and MongodB: Create a Restfull API with images upload",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,23 +11,25 @@
     "url": "git+https://github.com/SydCodeur/nodejs-express-mongodb.git"
   },
   "keywords": [
-    "nodejs",
-    "express",
-    "mongodb",
-    "crud",
-    "rest",
-    "api",
+    "nodejs express",
+    "express mongodb",
+    "crud express mongodb",
+    "image upload nodejs express mongodb",
+    "rest api",
     "sydcodeur",
-    "didier",
-    "senou"
+    "Didier senou"
   ],
-  "author": "Didier Senou",
+  "author": "Didier Senou alias SydCodeur",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SydCodeur/nodejs-express-mongodb/issues"
   },
   "homepage": "https://github.com/SydCodeur/nodejs-express-mongodb#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "mongoose": "^5.13.0",
+    "multer": "^1.4.2"
   }
 }
