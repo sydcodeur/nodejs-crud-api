@@ -89,7 +89,7 @@ exports.updatePlayer = async (req, res, next) => {
         player.bio = req.body.bio;
         player.photoUrl = photoUrl;
         const result = await player.save();
-        res.status(200).json({ 'message': 'Modification successfully completed!', player: result });
+        res.status(200).json({ message: 'Modification successfully completed!', player: result });
 
     } catch (error) {
         console.log('error', error);
@@ -104,14 +104,13 @@ exports.updatePlayer = async (req, res, next) => {
 exports.deletePlayer = async (req, res, next) => {
     const playerId = req.params.playerId;
     try {
-        const player = await Player.findById(playerId);
+        const player = await Player.findByIdAndDelete(playerId);
         if (!player) {
             return res.status(404).json({ message: 'Player not found!' });
         }
 
         sydFunctions.deleteImage(player.photoUrl);
-        await Player.findByIdAndRemove(playerId);
-        res.status(200).json({ 'message': 'Deletion completed successfully!' });
+        res.status(200).json({ message: 'Deletion completed successfully!' });
 
     } catch (error) {
         console.log('error', error);

@@ -4,6 +4,8 @@
   "description": "Node.js, Express and MongodB: Create a Restfull API with images upload",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,10 +28,11 @@
   },
   "homepage": "https://github.com/SydCodeur/nodejs-express-mongodb#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-validator": "^6.12.0",
-    "mongoose": "^5.13.0",
-    "multer": "^1.4.2"
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "mongoose": "^8.10.0",
+    "multer": "^1.4.5-lts.1"
   }
 }

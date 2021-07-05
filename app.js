@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 
 const playerRoutes = require('./routes/player');
+const config = require('./config/config');
 
 const app = express();
 
@@ -21,14 +22,12 @@ app.use((req, res, next) => {
 app.use('/api/v1/', playerRoutes);
 
 
-mongoose.connect('mongodb://localhost:27017/player-db',
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    })
+mongoose.connect(config.mongodb.url)
     .then(() => {
         console.log('You are connected to player-db!')
-        app.listen(3000);
+        app.listen(config.server.port, () => {
+            console.log(`Server is running on port ${config.server.port}`);
+        });
     })
     .catch((error) => {
         console.log('Connection to player-db failed', error)
